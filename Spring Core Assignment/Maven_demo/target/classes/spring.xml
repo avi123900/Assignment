@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd" default-init-method="myInit" default-destroy-method="cleanUp">
+    
+    
+    <bean id="customer" class="com.avinash.Customer">
+    	<property name="customerId" value="1" />
+    	<property name="customerName" value="Avinash" />
+    	<property name="customerContact" value="70876534" />
+    	<property name="customerAddress" ref="address1" />
+    
+    </bean>
+    
+     <bean id="address1" class="com.avinash.Address">
+    	<property name="city" value="Mirganj" />
+    	<property name="state" value="Bihar" />
+    	<property name="country" value="India" />
+    	<property name="street" value="123A" />
+    	<property name="zip" value="345423" />
+    </bean>
+    
+    
+</beans>
